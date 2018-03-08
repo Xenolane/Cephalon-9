@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    private LevelUp levelUp;
     private bool dying = false;
     public float health = 100;
     public Image health_Bar;
@@ -24,7 +25,8 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-			anim.SetBool ("isDying", dying);
+            
+            anim.SetBool ("isDying", dying);
 			dying = true;
 			Destroy(this.gameObject, 5);
         }
