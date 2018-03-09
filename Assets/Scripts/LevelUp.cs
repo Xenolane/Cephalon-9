@@ -8,6 +8,7 @@ public class LevelUp : MonoBehaviour {
     public Slider levelUp;
     public int currentLevel;
     public int exp;
+	public Text levelText;
 
 	// Use this for initialization
 	void Start ()
@@ -25,10 +26,9 @@ public class LevelUp : MonoBehaviour {
     {
         
         int ourLvl = (int)(0.1f * Mathf.Sqrt(exp));
-
         if (ourLvl != currentLevel)
         {
-            currentLevel = ourLvl;
+			currentLevel = ourLvl;
         }
 
         int expnextLevel = 100 * (currentLevel + 1) * (currentLevel + 1);
@@ -36,6 +36,7 @@ public class LevelUp : MonoBehaviour {
 
         int totaldifference = expnextLevel - (100 * currentLevel * currentLevel);
 
-        levelUp.value = 1 - differenceexp / totaldifference;
+		levelUp.value = (1f - (float)differenceexp / (float)totaldifference);
+		levelText.text = currentLevel + "";
     }
 }
