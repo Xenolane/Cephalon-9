@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 			animator.SetBool("isWalking", false);
 		}
 
-		animator.SetBool("isCrouching", Input.GetKey(KeyCode.C));   
+		animator.SetBool("isCrouching", Input.GetKey(KeyCode.C));
     }
 
     private void HandleMovement(float horizontal)
@@ -136,7 +136,6 @@ public class PlayerController : MonoBehaviour {
     {
 		if (falling)
 			return;
-//		rb_Player.AddForce(Vector2.up * jumpPower*100f,ForceMode2D.Force);
 		rb_Player.velocity = new Vector2(rb_Player.velocity.x,jumpPower);
 		falling = true;
 		animator.SetTrigger ("jumping");

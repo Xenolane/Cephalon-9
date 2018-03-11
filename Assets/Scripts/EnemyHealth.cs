@@ -11,10 +11,14 @@ public class EnemyHealth : MonoBehaviour
 	private bool melee = false;
 	private bool attacking = false;
 	private Animator anim;
+	private LevelUp level;
+
+	[SerializeField]private int points;
 
 	void Awake()
 	{
 		anim = gameObject.GetComponent <Animator> ();
+		level = GameObject.FindGameObjectWithTag ("Player").GetComponent<LevelUp> ();
 	}
 
     public void TakeDamage(float damage)
@@ -25,7 +29,9 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
 			anim.SetBool ("isDying", dying);
+			this.GetComponent<EnemyAI> ().dir = EnemyAI.Direction.NONE;
 			dying = true;
+			level.exp += points;
 			Destroy(this.gameObject, 5);
         }
     }

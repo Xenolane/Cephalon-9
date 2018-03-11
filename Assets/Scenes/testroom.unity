@@ -2171,7 +2171,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.7941176, g: 0.42625433, b: 0.42625433, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2360,6 +2360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   health_Bar: {fileID: 274046883}
+  points: 10
 --- !u!58 &1414423747
 CircleCollider2D:
   m_ObjectHideFlags: 0
