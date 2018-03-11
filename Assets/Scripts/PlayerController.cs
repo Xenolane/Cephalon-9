@@ -10,7 +10,10 @@ public class PlayerController : MonoBehaviour {
     private AudioSource thisAudioSource;
 	private LayerMask groundLayer;
 	private PointSystem pSystem;
+
 	[SerializeField]private Transform ground;
+	[SerializeField]private Transform spawnPoint;
+	[SerializeField]private Transform handle;
 
     [Header("Healthbar")]
     public Image healthBar;
@@ -19,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Shooting")]
     public float cooldown;
     public GameObject bullet;
+	public GameObject grenade;
 
     [Header("Stats")]
     public float health = 100;
@@ -26,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     public float speed = 2f;
 
     private bool canShoot = true;
+	private bool canThrow = true;
 	private bool falling = false;
     private Vector2 offset;
     private bool lookingLeft;
@@ -50,13 +55,9 @@ public class PlayerController : MonoBehaviour {
 
 		if (input != 0) {
 			lookingLeft = (input < 0);
-			if(lookingLeft)
-				offset = new Vector2(-2.3f, 0.1f);
-			else
-				offset = new Vector2(-2f, 0.1f);
+			offset = lookingLeft? new Vector2 (-2.3f, 0.1f):offset = new Vector2 (-2f, 0.1f);;
 		}
-
-
+			
         //Jump
 		if (Input.GetButtonDown("Jump") && !falling)
         {
@@ -64,14 +65,24 @@ public class PlayerController : MonoBehaviour {
         }
 
 		//Fire
-		if (Input.GetMouseButton(0) && canShoot)
-        {
-			animator.SetTrigger("fire");
-            GameObject go = Instantiate(bullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
-            go.GetComponent<ElectroBullet>().SetDirection(lookingLeft ? ElectroBullet.Direction.LEFT : ElectroBullet.Direction.RIGHT);
-            StartCoroutine(CanShoot());
-        }
-		        
+		if ((Input.GetKeyDown (KeyCode.Backslash) || Input.GetMouseButtonDown (0)) && canShoot) {
+			animator.SetTrigger ("fire");
+			GameObject go = Instantiate (bullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+			go.GetComponent<ElectroBullet> ().SetDirection (lookingLeft ? ElectroBullet.Direction.LEFT : ElectroBullet.Direction.RIGHT);
+			StartCoroutine (CanShoot ());
+		}
+		
+		if (Input.GetMouseButtonUp(1) && canThrow) {
+			Vector2 tarPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			animator.SetTrigger ("throw");
+			handle.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 ((tarPos.y - handle.position.y), (tarPos.x - handle.position.x)) * Mathf.Rad2Deg);
+			lookingLeft = (handle.rotation.eulerAngles.z > 90 && handle.rotation.eulerAngles.z < 270);
+			offset = lookingLeft? new Vector2 (-2.3f, 0.1f):offset = new Vector2 (-2f, 0.1f);
+			GameObject go = Instantiate (grenade, (Vector2)spawnPoint.transform.position, Quaternion.identity);
+			go.GetComponent<Rigidbody2D> ().AddForce ((tarPos - (Vector2)go.transform.position),ForceMode2D.Impulse);
+			StartCoroutine(CanThrow ());
+		}
+	        
 		if (Physics2D.OverlapCircle (ground.position, 0.01f,groundLayer)) {
 			falling = false;
 			animator.SetBool ("grounded", true);
@@ -113,6 +124,13 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(cooldown);
         canShoot = true;
     }
+
+	IEnumerator CanThrow()
+	{
+		canThrow = false;
+		yield return new WaitForSeconds(cooldown);
+		canThrow = true;
+	}
 
     private void Jump()
     {
