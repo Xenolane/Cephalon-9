@@ -28,11 +28,10 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-			anim.SetBool ("isDying", dying);
-			this.GetComponent<EnemyAI> ().dir = EnemyAI.Direction.NONE;
 			dying = true;
+			anim.SetBool ("isDying", true);
+			this.GetComponent<EnemyAI> ().dir = EnemyAI.Direction.NONE;
 			level.exp += points;
-			Destroy(this.gameObject, 5);
         }
     }
 
@@ -61,4 +60,8 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(1);
         attacking = false;
     }
+
+	public void die(){
+		Destroy(this.gameObject);
+	}
 }

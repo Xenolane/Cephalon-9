@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
     [Header("Shooting")]
     public float cooldown;
     public GameObject bullet;
+	public GameObject waterBullet;
+
 	public GameObject grenade;
 
     [Header("Stats")]
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpPower = 5f;
     public float speed = 2f;
 
+	public bool water = false;
     private bool canShoot = true;
 	private bool canThrow = true;
 	private bool falling = false;
@@ -46,6 +49,13 @@ public class PlayerController : MonoBehaviour {
 		groundLayer = LayerMask.GetMask ("Ground");
 		pSystem = GetComponent<PointSystem> ();
     }
+
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.Alpha1))
+			water = false;
+		if (Input.GetKeyDown (KeyCode.Alpha2))
+			water = true;
+	}
 
     void FixedUpdate()
     {
@@ -67,7 +77,7 @@ public class PlayerController : MonoBehaviour {
 		//Fire
 		if ((Input.GetKeyDown (KeyCode.Backslash) || Input.GetMouseButtonDown (0)) && canShoot) {
 			animator.SetTrigger ("fire");
-			GameObject go = Instantiate (bullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+			GameObject go = Instantiate (water? waterBullet : bullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
 			go.GetComponent<ElectroBullet> ().SetDirection (lookingLeft ? ElectroBullet.Direction.LEFT : ElectroBullet.Direction.RIGHT);
 			StartCoroutine (CanShoot ());
 		}

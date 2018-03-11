@@ -7,8 +7,8 @@ public class ElectroBullet : MonoBehaviour
 
     public enum Direction { NONE, LEFT, RIGHT };
     private Direction dir = Direction.NONE;
-    private float damage = 5f;
-    private float speed = 15f;
+	public float damage;
+    public float speed;
     public bool isEnemy;
 
     private void Start()
