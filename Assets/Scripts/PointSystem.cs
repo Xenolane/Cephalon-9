@@ -5,15 +5,11 @@ using UnityEngine.UI;
 
 public class PointSystem : MonoBehaviour {
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
+	[SerializeField] private Text pointsText;
+	public int points=0;
+
 	void Update ()
     {
-		
+		pointsText.text = points + "";
 	}
 }

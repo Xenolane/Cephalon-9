@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	private SpriteRenderer sprite;
     private AudioSource thisAudioSource;
 	private LayerMask groundLayer;
+	private PointSystem pSystem;
 	[SerializeField]private Transform ground;
 
     [Header("Healthbar")]
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
         offset = new Vector2(-2f, 0.1f);
 		sprite = this.GetComponentInChildren<SpriteRenderer>();
 		groundLayer = LayerMask.GetMask ("Ground");
+		pSystem = GetComponent<PointSystem> ();
     }
 
     void FixedUpdate()
@@ -116,8 +118,17 @@ public class PlayerController : MonoBehaviour {
     {
 		if (falling)
 			return;
-		rb_Player.AddForce(Vector2.up * jumpPower*100f,ForceMode2D.Force);
+//		rb_Player.AddForce(Vector2.up * jumpPower*100f,ForceMode2D.Force);
+		rb_Player.velocity = new Vector2(rb_Player.velocity.x,jumpPower);
 		falling = true;
 		animator.SetTrigger ("jumping");
     }
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.CompareTag ("Coin")) {
+			Destroy (other.gameObject);
+			pSystem.points += 1;
+		}
+	}
+
 }
