@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour 
 {
     public float playerHealth = 100; 
+
     public Image currentHealthbar;
     public float heal = 15;
 
@@ -19,14 +20,14 @@ public class HealthBar : MonoBehaviour
     
 	private void UpdateHealthbar() 
 	{
-        currentHealthbar.fillAmount = playerHealth / 100; 
+		currentHealthbar.fillAmount = playerHealth / maxHitpoint; 
 	} 
 
 	public void TakeDamage() 
 	{
         print("TakeDamage");
 
-        playerHealth -= damage;
+		playerHealth -= damage;
 
         if (playerHealth <= 0)
         {
@@ -47,4 +48,9 @@ public class HealthBar : MonoBehaviour
 		if (playerHealth > maxHitpoint) playerHealth = maxHitpoint; 
 		UpdateHealthbar(); 
 	} 
+
+	public void setMaxHealth(int value){
+		maxHitpoint = value;
+	}
+
 }﻿

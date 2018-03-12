@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -57,4 +58,8 @@ public class PauseMenu : MonoBehaviour {
     {
         Application.Quit();
     }
+		
+	public void disable(Button button){
+		button.interactable = false;
+	}
 }

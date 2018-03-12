@@ -69,4 +69,8 @@ public class Jetpack : MonoBehaviour
 
     }
 
+	public void setFuel(float value){
+		maxJetpackTime = value;
+	}
+
 }
