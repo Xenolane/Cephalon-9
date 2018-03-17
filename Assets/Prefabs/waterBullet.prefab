@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e1cd6af6471d4aa8d0cee72497f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  speed: 30
+  damage: 20
+  speed: 10
   isEnemy: 0
 --- !u!212 &212307381047818782
 SpriteRenderer:

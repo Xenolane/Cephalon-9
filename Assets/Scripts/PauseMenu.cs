@@ -64,15 +64,15 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void setElectric(float d){
-		ElectroBullet.damageMultiplier = d;
+		ElectroBullet.setDamage(d);
 	}
 
 	public void setWater(float d){
-		WaterBullet.damageMultiplier = d;
+		WaterBullet.setDamage(d);
 	}
 		
 	public void setFire(float d){
-		FireBullet.damageMultiplier = d;
+		FireBullet.setDamage (d);
 	}
 
 	public void setBlast(float d){

@@ -3193,6 +3193,37 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 114865926528685020, guid: 81eda17eb728b8343a775820b8247347,
+        type: 2}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df674462b6a947478b4ac2356cec4b1, type: 2}
   m_IsPrefabParent: 0

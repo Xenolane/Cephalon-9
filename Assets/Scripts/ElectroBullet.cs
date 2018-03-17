@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElectroBullet : MonoBehaviour
+public class ElectroBullet : Bullet
 {
 
-	public enum Direction { NONE, LEFT, RIGHT };
-	private Direction dir = Direction.NONE;
 	public float damage;
 	public float speed;
-	public bool isEnemy;
 
-	public static float damageMultiplier=1;
-	public static float speedMultiplier=1;
+	private static float damageMultiplier=1;
 
 	private void Start()
 	{
@@ -25,27 +21,16 @@ public class ElectroBullet : MonoBehaviour
 			return;
 
 		if (dir == Direction.LEFT)
-			transform.position -= transform.right * speed *speedMultiplier* Time.deltaTime;
+			transform.position -= transform.right * speed * Time.deltaTime;
 		else
-			transform.position += transform.right * speed *speedMultiplier* Time.deltaTime;
-	}
-
-	private IEnumerator LifeTime()
-	{
-		yield return new WaitForSeconds(3.0f);
-		Destroy(gameObject);
+			transform.position += transform.right * speed * Time.deltaTime;
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.tag == "Enemy" && !isEnemy)
+		if (coll.tag == "Enemy")
 		{
 			coll.GetComponent<EnemyHealth>().TakeDamage(damage*damageMultiplier);
-			Destroy(gameObject);
-		}
-		else if (coll.tag == "Player" && isEnemy)
-		{
-			coll.GetComponent<PlayerController>().TakeDamage(damage*damageMultiplier);
 			Destroy(gameObject);
 		}
 	}
@@ -55,4 +40,7 @@ public class ElectroBullet : MonoBehaviour
 		dir = _dir;
 	}
 
+	public static void setDamage(float d){
+		damageMultiplier = d;
+	}
 }

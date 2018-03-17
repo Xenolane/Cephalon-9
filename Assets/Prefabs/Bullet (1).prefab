@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 10
+  speed: 15
   isEnemy: 0
 --- !u!212 &212307381047818782
 SpriteRenderer:
