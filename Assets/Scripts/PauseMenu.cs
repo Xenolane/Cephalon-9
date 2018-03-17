@@ -62,4 +62,20 @@ public class PauseMenu : MonoBehaviour {
 	public void disable(Button button){
 		button.interactable = false;
 	}
+
+	public void setElectric(float d){
+		ElectroBullet.damageMultiplier = d;
+	}
+
+	public void setWater(float d){
+		WaterBullet.damageMultiplier = d;
+	}
+		
+	public void setFire(float d){
+		FireBullet.damageMultiplier = d;
+	}
+
+	public void setBlast(float d){
+		Grenade.damageMultiplier = d;
+	}
 }

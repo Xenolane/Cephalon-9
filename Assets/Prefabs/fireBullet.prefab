@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4200838012918668}
   - component: {fileID: 50901441184960764}
   - component: {fileID: 61564173339131844}
-  - component: {fileID: 114381133268078918}
+  - component: {fileID: 114865926528685020}
   m_Layer: 0
-  m_Name: waterBullet
+  m_Name: fireBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ Animator:
   m_GameObject: {fileID: 1959757132281264}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf85a94c6d58e3a488b736d303185bc0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 46441f738fb6c234ba2b73eb93a266a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -216,7 +216,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114381133268078918
+--- !u!114 &114865926528685020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -224,11 +224,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623065519231974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497e1cd6af6471d4aa8d0cee72497f63, type: 3}
+  m_Script: {fileID: 11500000, guid: b4f7adb2dc0378441bb8f449ae7d485b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  speed: 30
+  damage: 25
+  speed: 8
   isEnemy: 0
 --- !u!212 &212307381047818782
 SpriteRenderer:
@@ -262,7 +262,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a67394aa6197224aa224b6c7241dabb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05a8f0bc765f0ba44b58f37ba7594163, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

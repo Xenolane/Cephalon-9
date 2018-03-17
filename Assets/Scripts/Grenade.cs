@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour {
 
+	private float damage=50;
+	public static float damageMultiplier=0;
+
 	void Start () {
 		StartCoroutine (explode ());
 	}

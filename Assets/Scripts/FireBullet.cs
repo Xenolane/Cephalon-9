@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElectroBullet : MonoBehaviour
+public class FireBullet : MonoBehaviour
 {
 
 	public enum Direction { NONE, LEFT, RIGHT };

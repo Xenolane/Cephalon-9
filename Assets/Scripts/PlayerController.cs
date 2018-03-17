@@ -4,6 +4,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	private enum BulletType{
+		ELECTRIC, FIRE, WATER
+	};
+
     private Rigidbody2D rb_Player;
     private Animator animator;
 	private SpriteRenderer sprite;
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour {
     public float cooldown;
     public GameObject bullet;
 	public GameObject waterBullet;
-	//public GameObject fireBullet;
+	public GameObject fireBullet;
 
 	public GameObject grenade;
 
@@ -34,7 +38,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpPower = 5f;
     public float speed = 2f;
 
-	public bool water = false;
+	private BulletType bulletType;
     private bool canShoot = true;
 	private bool canThrow = true;
 	private bool falling = false;
@@ -54,14 +58,18 @@ public class PlayerController : MonoBehaviour {
 
 		//load from save
 		maxHealth=100;
+		bulletType = BulletType.ELECTRIC;
+
 		TakeDamage (0);
     }
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Alpha1))
-			water = false;
+			bulletType = BulletType.ELECTRIC;
 		if (Input.GetKeyDown (KeyCode.Alpha2))
-			water = true;
+			bulletType = BulletType.WATER;
+		if (Input.GetKeyDown (KeyCode.Alpha3))
+			bulletType = BulletType.FIRE;
 	}
 
     void FixedUpdate()
@@ -83,8 +91,20 @@ public class PlayerController : MonoBehaviour {
 
 		//Fire
 		if ((Input.GetKeyDown (KeyCode.Backslash) || Input.GetMouseButtonDown (0)) && canShoot) {
+			GameObject activeBullet = bullet;
+			switch (bulletType) {
+			case BulletType.ELECTRIC:
+				activeBullet = bullet;
+				break;
+			case BulletType.FIRE:
+				activeBullet = fireBullet;
+				break;
+			case BulletType.WATER:
+				activeBullet = waterBullet;
+				break;
+			}
 			animator.SetTrigger ("fire");
-			GameObject go = Instantiate (water? waterBullet : bullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+			GameObject go = Instantiate (activeBullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
 			go.GetComponent<ElectroBullet> ().SetDirection (lookingLeft ? ElectroBullet.Direction.LEFT : ElectroBullet.Direction.RIGHT);
 			StartCoroutine (CanShoot ());
 		}
