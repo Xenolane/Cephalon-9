@@ -10,5 +10,6 @@ public class Grenade : MonoBehaviour {
 	IEnumerator explode(){
 		yield return new WaitForSeconds (3);
 		Destroy (gameObject);
+		//explosion
 	}
 }

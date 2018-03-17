@@ -171,4 +171,8 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public void setMaxHealth(float val){
+		maxHealth = val;
+		health = maxHealth;
+	}
 }
