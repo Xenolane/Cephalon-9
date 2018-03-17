@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	private LayerMask groundLayer;
 	private PointSystem pSystem;
 
+	[Header("Components")]
 	[SerializeField]private Transform ground;
 	[SerializeField]private Transform spawnPoint;
 	[SerializeField]private Transform handle;
@@ -23,11 +24,13 @@ public class PlayerController : MonoBehaviour {
     public float cooldown;
     public GameObject bullet;
 	public GameObject waterBullet;
+	//public GameObject fireBullet;
 
 	public GameObject grenade;
 
     [Header("Stats")]
     public float health = 100;
+	private float maxHealth;
     public float jumpPower = 5f;
     public float speed = 2f;
 
@@ -48,6 +51,10 @@ public class PlayerController : MonoBehaviour {
 		sprite = this.GetComponentInChildren<SpriteRenderer>();
 		groundLayer = LayerMask.GetMask ("Ground");
 		pSystem = GetComponent<PointSystem> ();
+
+		//load from save
+		maxHealth=100;
+		TakeDamage (0);
     }
 
 	void Update(){
@@ -83,13 +90,8 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		if (Input.GetMouseButtonUp(1) && canThrow) {
-			Vector2 tarPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			animator.SetTrigger ("throw");
-			handle.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 ((tarPos.y - handle.position.y), (tarPos.x - handle.position.x)) * Mathf.Rad2Deg);
-			lookingLeft = (handle.rotation.eulerAngles.z > 90 && handle.rotation.eulerAngles.z < 270);
-			offset = lookingLeft? new Vector2 (-2.3f, 0.1f):offset = new Vector2 (-2f, 0.1f);
-			GameObject go = Instantiate (grenade, (Vector2)spawnPoint.transform.position, Quaternion.identity);
-			go.GetComponent<Rigidbody2D> ().AddForce ((tarPos - (Vector2)go.transform.position),ForceMode2D.Impulse);
+
+			StartCoroutine (grenadeLaunch ());
 			StartCoroutine(CanThrow ());
 		}
 	        
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour {
     {
         health -= damage;
 
-        float filler = health / 100;
+		float filler = health / maxHealth;
         healthBar.fillAmount = filler;
     }
 
@@ -140,6 +142,17 @@ public class PlayerController : MonoBehaviour {
 		canThrow = false;
 		yield return new WaitForSeconds(cooldown);
 		canThrow = true;
+	}
+
+	IEnumerator grenadeLaunch(){
+		Vector2 tarPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		animator.SetTrigger ("throw");
+		handle.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 ((tarPos.y - handle.position.y), (tarPos.x - handle.position.x)) * Mathf.Rad2Deg);
+		lookingLeft = (handle.rotation.eulerAngles.z > 90 && handle.rotation.eulerAngles.z < 270);
+		offset = lookingLeft? new Vector2 (-2.3f, 0.1f):offset = new Vector2 (-2f, 0.1f);
+		yield return new WaitForSeconds (0.8f);
+		GameObject go = Instantiate (grenade, (Vector2)spawnPoint.transform.position, Quaternion.identity);
+		go.GetComponent<Rigidbody2D> ().AddForce ((tarPos - (Vector2)go.transform.position),ForceMode2D.Impulse);
 	}
 
     private void Jump()
