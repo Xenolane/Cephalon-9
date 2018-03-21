@@ -79,7 +79,15 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -28, y: 32}
+      - {x: -31, y: 29}
+      - {x: -31, y: -29}
+      - {x: -28, y: -32}
+      - {x: 30, y: -32}
+      - {x: 32, y: -30}
+      - {x: 32, y: 30}
+      - {x: 30, y: 32}
     physicsShape: []
   spritePackingTag: 
   userData: 

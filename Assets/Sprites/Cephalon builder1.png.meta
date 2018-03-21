@@ -79,8 +79,22 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-    physicsShape: []
+    outline:
+    - - {x: 24.601326, y: 42.8581}
+      - {x: -19, y: 43}
+      - {x: -18.858105, y: -19.716213}
+      - {x: -17, y: -35}
+      - {x: 29, y: -35}
+      - {x: 30.86486, y: -33.57432}
+      - {x: 30.864853, y: 41}
+    physicsShape:
+    - - {x: 29, y: 43}
+      - {x: -19, y: 43}
+      - {x: -19, y: -20}
+      - {x: -17, y: -35}
+      - {x: 29, y: -35}
+      - {x: 31.290535, y: -33.85811}
+      - {x: 31.432434, y: 41.283783}
   spritePackingTag: 
   userData: 
   assetBundleName: 
