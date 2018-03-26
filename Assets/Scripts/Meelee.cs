@@ -22,7 +22,7 @@ public class Meelee : MonoBehaviour
 
         if (enemy.hasBoth)
         {
-            if (enemy.range == EnemyAI.Range.MEDIUM)
+			if (enemy.range == EnemyAI.Range.MEDIUM)
             {
                 enemy.ChasePlayer();
             }

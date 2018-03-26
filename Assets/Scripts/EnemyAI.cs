@@ -79,10 +79,11 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, mask);
+		RaycastHit2D hit = Physics2D.CircleCast((Vector2)transform.position,transform.localScale.x,(Vector2)transform.right,Mathf.Infinity,mask);
+
         if (hit.collider != null)
         {
-            if (hit.transform.name == "Player")
+			if (hit.collider.CompareTag("Player"))
             {
                 if (insideMovementBounds(hit.transform))
                 {
@@ -108,6 +109,8 @@ public class EnemyAI : MonoBehaviour
             range = Range.MEDIUM;
         else
             range = Range.FAR;
+
+		Debug.Log (range);
     }
 
     // Moves an object within bounds

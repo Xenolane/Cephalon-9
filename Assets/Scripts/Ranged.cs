@@ -37,8 +37,7 @@ public class Ranged : MonoBehaviour
         {
             timer = 0f;
             GameObject bullet = Instantiate(BulletPrefab, transform.position, transform.rotation);
-            bullet.GetComponent<Bullet>().SetDirection(enemy.dir == EnemyAI.Direction.LEFT ? ElectroBullet.Direction.RIGHT : ElectroBullet.Direction.LEFT);
-//			bullet.GetComponent<Bullet> ().isEnemy = true;
+            bullet.GetComponent<ElectroBullet>().SetDirection(enemy.dir == EnemyAI.Direction.LEFT ? ElectroBullet.Direction.RIGHT : ElectroBullet.Direction.LEFT);
         }
     }
 
