@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
             if (!attacking)
             {
                 float damage = 5;
-				anim.SetBool ("isMelee", melee);
+				anim.SetTrigger ("isMelee");
 				melee = true;
                 coll.GetComponent<PlayerController>().TakeDamage(damage);
                 StartCoroutine(DamageArea());
