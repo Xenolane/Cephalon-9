@@ -24,4 +24,5 @@ public class ElectroBullet : Bullet
 	public static void setDamage(float d){
 		damageMultiplier = d;
 	}
+
 }
