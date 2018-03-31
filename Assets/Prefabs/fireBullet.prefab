@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200838012918668}
-  - component: {fileID: 50901441184960764}
   - component: {fileID: 61564173339131844}
   - component: {fileID: 114865926528685020}
   m_Layer: 0
@@ -68,32 +67,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959757132281264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.82, y: -0.265, z: 0.034110013}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4200838012918668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50901441184960764
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623065519231974}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.25
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61564173339131844
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -106,7 +85,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8130546, y: -0.26527357}
+  m_Offset: {x: 1.8205237, y: -0.26527357}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -117,7 +96,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35665607, y: 0.089035034}
+  m_Size: {x: 0.20727062, y: 0.089035034}
   m_EdgeRadius: 0
 --- !u!82 &82488014299083300
 AudioSource:
@@ -222,13 +201,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623065519231974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4f7adb2dc0378441bb8f449ae7d485b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   speed: 8
+  damage: 8
+  left: 0
 --- !u!212 &212307381047818782
 SpriteRenderer:
   m_ObjectHideFlags: 1

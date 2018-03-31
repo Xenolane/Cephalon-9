@@ -12,14 +12,27 @@ namespace Cephalon9{
 		[SerializeField]private Transform ground;
 		[SerializeField]private LayerMask groundLayer;
 		[SerializeField]SpriteRenderer sprite;
+		AudioSource footsteps;
+
+		public Animator anim;
 		private Rigidbody2D rb;
+		private PlayerWeapon weapon;
 
 		//private variables
 		private bool grounded=false;
-		private bool right=true;
+		[HideInInspector]public bool right=true;
 
 		void Start (){
 			rb = this.GetComponent<Rigidbody2D> ();
+			weapon = this.GetComponent<PlayerWeapon> ();
+			footsteps = GetComponent<AudioSource> ();
+		}
+
+		void Update(){
+			if (Input.GetMouseButtonDown (0))
+				weapon.StartCoroutine ("shoot");
+			if(Input.GetMouseButtonUp(1))
+				weapon.StartCoroutine ("launchGrenade");
 		}
 
 		void FixedUpdate(){
@@ -32,20 +45,24 @@ namespace Cephalon9{
 		//ground Test
 		void LateUpdate () {
 			grounded = Physics2D.OverlapCircle (ground.position, 0.01f, groundLayer);
+			anim.SetBool ("grounded", grounded);
 			processFacing ();
 		}
 
 		//private functions
 		void jump(){
 			if (grounded) {
+				anim.SetTrigger ("jumping");
 				rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
 			}
 		}
 
+		//movement
 		void processMovement(){
 			rb.velocity = new Vector2 (Input.GetAxis ("Horizontal") * speed, rb.velocity.y);
 		}
 
+		//sprite Handling
 		void processFacing(){
 			if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow))
 				right = false;
@@ -57,6 +74,21 @@ namespace Cephalon9{
 				right = false;
 				
 			sprite.flipX = !right;
+
+			if (rb.velocity.x != 0)
+				anim.SetBool ("isWalking", true);
+			else
+				anim.SetBool ("isWalking", false);
 		}
-	}
+
+		void processAudio(){
+			if (rb.velocity.x != 0 && grounded) {
+				if (footsteps.isPlaying)
+					return;
+				footsteps.Play ();
+			}
+		}
+
+
+	}	
 }

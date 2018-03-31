@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 			}
 			animator.SetTrigger ("fire");
 			GameObject go = Instantiate (activeBullet, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
-			go.GetComponent<Bullet> ().SetDirection (lookingLeft ? Bullet.Direction.LEFT : Bullet.Direction.RIGHT);
+			//go.GetComponent<Bullet> ().SetDirection (lookingLeft ? Bullet.Direction.LEFT : Bullet.Direction.RIGHT);
 			StartCoroutine (CanShoot ());
 		}
 		

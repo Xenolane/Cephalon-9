@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PointSystem : MonoBehaviour {
@@ -11,5 +9,12 @@ public class PointSystem : MonoBehaviour {
 	void Update ()
     {
 		pointsText.text = points + "";
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.CompareTag ("Coin")) {
+			Destroy (other.gameObject);
+			points += 1;
+		}
 	}
 }

@@ -19,11 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200838012918668}
-  - component: {fileID: 50901441184960764}
   - component: {fileID: 114154867830547518}
   - component: {fileID: 61564173339131844}
   m_Layer: 0
-  m_Name: Bullet (1)
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,32 +67,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959757132281264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.82, y: -0.265, z: 0.034110013}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4200838012918668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50901441184960764
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623065519231974}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.25
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61564173339131844
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -128,7 +107,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dd69c4f56ce3703438ee502353582f08, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -227,8 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a6f6f12b2fee040b8500359b1e7247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
   damage: 10
-  speed: 15
+  left: 0
 --- !u!212 &212307381047818782
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelUp : MonoBehaviour {
@@ -37,6 +35,6 @@ public class LevelUp : MonoBehaviour {
         int totaldifference = expnextLevel - (100 * currentLevel * currentLevel);
 
 		levelUp.value = (1f - (float)differenceexp / (float)totaldifference);
-		levelText.text = currentLevel + "";
+		levelText.text = currentLevel + 1+ "";
     }
 }
