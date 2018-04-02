@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ec6495a135dcb764caa68e370b9d4efa
-timeCreated: 1519663894
+guid: dd2f66a7f67e3ac4e8c547219fd84254
+timeCreated: 1522690700
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -74,7 +74,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -84,7 +84,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,10 +100,10 @@ TextureImporter:
       name: eel in a box_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
-        width: 102
-        height: 123
+        x: 22
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,10 +114,10 @@ TextureImporter:
       name: eel in a box_1
       rect:
         serializedVersion: 2
-        x: 148
-        y: 0
-        width: 95
-        height: 123
+        x: 150
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: eel in a box_2
       rect:
         serializedVersion: 2
-        x: 275
-        y: 0
-        width: 96
-        height: 123
+        x: 278
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: eel in a box_3
       rect:
         serializedVersion: 2
-        x: 403
-        y: 0
-        width: 95
-        height: 123
+        x: 406
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: eel in a box_4
       rect:
         serializedVersion: 2
-        x: 528
-        y: 1
-        width: 102
-        height: 123
+        x: 534
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: eel in a box_5
       rect:
         serializedVersion: 2
-        x: 660
-        y: 0
-        width: 97
-        height: 123
+        x: 662
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: eel in a box_6
       rect:
         serializedVersion: 2
-        x: 787
-        y: 0
-        width: 96
-        height: 123
+        x: 790
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +198,10 @@ TextureImporter:
       name: eel in a box_7
       rect:
         serializedVersion: 2
-        x: 915
-        y: 0
-        width: 95
-        height: 123
+        x: 918
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: eel in a box_8
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 0
-        width: 97
-        height: 123
+        x: 1046
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: eel in a box_9
       rect:
         serializedVersion: 2
-        x: 1172
-        y: 0
-        width: 95
-        height: 123
+        x: 1174
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: eel in a box_10
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 0
-        width: 96
-        height: 123
+        x: 1302
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: eel in a box_11
       rect:
         serializedVersion: 2
-        x: 1426
-        y: 0
-        width: 96
-        height: 123
+        x: 1430
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: eel in a box_12
       rect:
         serializedVersion: 2
-        x: 1555
-        y: 0
-        width: 95
-        height: 123
+        x: 1558
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: eel in a box_13
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 0
-        width: 96
-        height: 123
+        x: 1686
+        y: 8
+        width: 90
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: eel in a box_14
       rect:
         serializedVersion: 2
-        x: 1812
-        y: 0
-        width: 95
-        height: 128
+        x: 1814
+        y: 8
+        width: 90
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: eel in a box_15
       rect:
         serializedVersion: 2
-        x: 1939
-        y: 0
-        width: 96
-        height: 128
+        x: 1942
+        y: 8
+        width: 90
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: eel in a box_16
       rect:
         serializedVersion: 2
-        x: 2067
-        y: 0
-        width: 95
-        height: 128
+        x: 2070
+        y: 8
+        width: 90
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
