@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour {
     private Vector2 offset;
     private bool lookingLeft;
 
-
+    [Header("UI")]
+    public GameObject gameOver;
     void Start()
     {
         rb_Player = this.GetComponent<Rigidbody2D>();
@@ -195,4 +196,12 @@ public class PlayerController : MonoBehaviour {
 		maxHealth = val;
 		health = maxHealth;
 	}
+
+    public void Death()
+    {
+        if (health <= 0)
+        {
+            gameOver.SetActive(true);
+        }
+    }
 }
