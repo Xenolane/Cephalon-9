@@ -190,6 +190,21 @@
         <para>Types of UnityGUI input and processing events.</para>
       </summary>
     </member>
+    <member name="F:UnityEngine.EventType.mouseDown">
+      <summary>
+        <para>An event that is called when the mouse is clicked.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.EventType.mouseDrag">
+      <summary>
+        <para>An event that is called when the mouse is clicked and dragged.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.EventType.mouseUp">
+      <summary>
+        <para>An event that is called when the mouse is no longer being clicked.</para>
+      </summary>
+    </member>
     <member name="F:UnityEngine.EventType.ContextClick">
       <summary>
         <para>User has right-clicked (or control-clicked on the mac).</para>
@@ -703,7 +718,8 @@
       <param name="color">A tint color to apply on the texture.</param>
       <param name="borderWidth">The width of the border. If 0, the full texture is drawn.</param>
       <param name="borderWidths">The width of the borders (left, top, right and bottom). If Vector4.zero, the full texture is drawn.</param>
-      <param name="cornerRadius">The radius for rounded corners. If 0, corners will not be rounded.</param>
+      <param name="borderRadius">The radius for rounded corners. If 0, corners will not be rounded.</param>
+      <param name="borderRadiuses">The radiuses for rounded corners (top-left, top-right, bottom-right and bottom-left). If Vector4.zero, corners will not be rounded.</param>
     </member>
     <member name="M:UnityEngine.GUI.DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single,UnityEngine.Color,UnityEngine.Vector4,System.Single)">
       <summary>
@@ -717,7 +733,8 @@
       <param name="color">A tint color to apply on the texture.</param>
       <param name="borderWidth">The width of the border. If 0, the full texture is drawn.</param>
       <param name="borderWidths">The width of the borders (left, top, right and bottom). If Vector4.zero, the full texture is drawn.</param>
-      <param name="cornerRadius">The radius for rounded corners. If 0, corners will not be rounded.</param>
+      <param name="borderRadius">The radius for rounded corners. If 0, corners will not be rounded.</param>
+      <param name="borderRadiuses">The radiuses for rounded corners (top-left, top-right, bottom-right and bottom-left). If Vector4.zero, corners will not be rounded.</param>
     </member>
     <member name="M:UnityEngine.GUI.DrawTextureWithTexCoords(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.Rect)">
       <summary>
