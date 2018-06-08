@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Cephalon9;
 
-public class PointSystem : MonoBehaviour {
+namespace Cephalon9{
+	public class PointSystem : MonoBehaviour {
 
-	[SerializeField] private Text pointsText;
-	public int points=0;
+		[SerializeField] private Text pointsText;
+		public int points=0;
 
-	void Update ()
-    {
-		pointsText.text = points + "";
-	}
+		void Update ()
+	    {
+			pointsText.text = points + "";
+		}
 
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag ("Coin")) {
-			Destroy (other.gameObject);
-			points += 1;
+		void OnTriggerEnter2D(Collider2D other){
+			if (other.CompareTag ("Coin")) {
+				Destroy (other.gameObject);
+				points += 1;
+			}
 		}
 	}
 }

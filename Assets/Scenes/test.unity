@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -415,6 +415,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &250730505 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95539809656029810, guid: 5a0ca60202eb76a4392433908db13a09,
+    type: 2}
+  m_PrefabInternal: {fileID: 935840703}
 --- !u!114 &311538657 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114142500076475284, guid: 6df674462b6a947478b4ac2356cec4b1,
@@ -529,68 +534,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
---- !u!1001 &462342347
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114703679948715334, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: pointsText
-      value: 
-      objectReference: {fileID: 1244566021}
-    - target: {fileID: 114549479573341098, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: levelUp
-      value: 
-      objectReference: {fileID: 1095170566}
-    - target: {fileID: 114549479573341098, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: levelText
-      value: 
-      objectReference: {fileID: 157327019}
-    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 171320309}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
-  m_IsPrefabParent: 0
 --- !u!114 &483803968 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114593711318436128, guid: 6df674462b6a947478b4ac2356cec4b1,
@@ -1219,6 +1162,88 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &935840703
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 171320309}
+    - target: {fileID: 114549479573341098, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: levelUp
+      value: 
+      objectReference: {fileID: 1095170566}
+    - target: {fileID: 114549479573341098, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 157327019}
+    - target: {fileID: 114703679948715334, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: pointsText
+      value: 
+      objectReference: {fileID: 1244566021}
+    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: JetpackBar
+      value: 
+      objectReference: {fileID: 2124334451}
+    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: force.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: consumptionRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 250730505}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &975607653 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114046076367611358, guid: 6df674462b6a947478b4ac2356cec4b1,
