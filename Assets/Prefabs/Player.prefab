@@ -361,6 +361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JetpackBar: {fileID: 0}
+  animator: {fileID: 95539809656029810}
+  force: {x: 0, y: 25}
+  maxFuel: 100
+  consumptionRate: 2
 --- !u!114 &114376474557504438
 MonoBehaviour:
   m_ObjectHideFlags: 1
