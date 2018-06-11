@@ -37,7 +37,7 @@ namespace Cephalon9{
 
 		void FixedUpdate(){
 			processMovement ();
-
+			processAudio ();
 			if (Input.GetKeyDown (KeyCode.Space))
 				jump ();
 		}
@@ -75,16 +75,15 @@ namespace Cephalon9{
 				
 			sprite.flipX = !right;
 
-			if (rb.velocity.x != 0)
+			if (rb.velocity.x != 0) {
 				anim.SetBool ("isWalking", true);
-			else
+			} else {
 				anim.SetBool ("isWalking", false);
+			}
 		}
 
 		void processAudio(){
 			if (rb.velocity.x != 0 && grounded) {
-				if (footsteps.isPlaying)
-					return;
 				footsteps.Play ();
 			}
 		}

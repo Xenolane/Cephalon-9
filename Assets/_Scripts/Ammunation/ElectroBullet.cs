@@ -14,6 +14,8 @@ public class ElectroBullet : Bullet
 
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
+		if (coll.CompareTag ("Ground"))
+				Destroy (this.gameObject);
 
 		if (coll.CompareTag ("Enemy")) {
 			coll.GetComponent<EnemyAI> ().takeDamage (damage);

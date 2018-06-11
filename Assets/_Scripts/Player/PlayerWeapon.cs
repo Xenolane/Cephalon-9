@@ -8,6 +8,7 @@ namespace Cephalon9{
 		[Header("Components")]
 		[SerializeField]Transform area;
 		[SerializeField]Transform spawnPoint;
+		[SerializeField]private AudioSource aSource;
 
 		[Header("Ammo")]
 		[SerializeField]private GameObject bullet;
@@ -21,9 +22,13 @@ namespace Cephalon9{
 		[Header("properties")]
 		[SerializeField]private float cooldown;
 
+		[Header("Audio Clips")]
+		[SerializeField]private AudioClip elecBullet;
+
 		void Start () {
 			plr = GetComponent<PlayerController> ();
 			activeBullet = bullet;
+			aSource = GetComponent<AudioSource> ();
 		}
 
 		void Update () {
@@ -47,7 +52,7 @@ namespace Cephalon9{
 			yield return new WaitForSeconds (0.3f);
 			GameObject b = Instantiate (activeBullet, (Vector2)spawnPoint.transform.position, Quaternion.identity);
 			b.GetComponent<Bullet> ().setDirection (!plr.right);
-
+			aSource.PlayOneShot (elecBullet,1);
 			StartCoroutine(shootCooldown());
 		}
 
