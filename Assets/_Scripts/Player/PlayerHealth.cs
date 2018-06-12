@@ -8,6 +8,8 @@ namespace Cephalon9{
 		private float health;
 		private float maxHealth;
 
+        public GameObject gameOver;
+
 		[SerializeField]private Slider healthBar;
 
 		void Start () {
@@ -26,8 +28,11 @@ namespace Cephalon9{
 			if (health > 0)
 				health -= damage;
 
-			if (health <= 0) {
-				//die
+			if (health <= 0)
+            {
+                //die
+                gameOver.SetActive(true);
+                Destroy(gameObject);
 			}
 		}
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1196,16 +1196,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
+    - target: {fileID: 114703679948715334, guid: 5a0ca60202eb76a4392433908db13a09,
         type: 2}
-      propertyPath: healthBar
+      propertyPath: pointsText
       value: 
-      objectReference: {fileID: 171320309}
-    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: JetpackBar
-      value: 
-      objectReference: {fileID: 2124334451}
+      objectReference: {fileID: 1244566021}
     - target: {fileID: 114549479573341098, guid: 5a0ca60202eb76a4392433908db13a09,
         type: 2}
       propertyPath: levelUp
@@ -1216,11 +1211,16 @@ Prefab:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 157327019}
-    - target: {fileID: 114703679948715334, guid: 5a0ca60202eb76a4392433908db13a09,
+    - target: {fileID: 114288744506685384, guid: 5a0ca60202eb76a4392433908db13a09,
         type: 2}
-      propertyPath: pointsText
+      propertyPath: JetpackBar
       value: 
-      objectReference: {fileID: 1244566021}
+      objectReference: {fileID: 2124334451}
+    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 171320309}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
   m_IsPrefabParent: 0
