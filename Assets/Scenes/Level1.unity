@@ -2685,7 +2685,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.9
+      value: -6.58
       objectReference: {fileID: 0}
     - target: {fileID: 4167820349832130, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2745,6 +2745,16 @@ Prefab:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 2024554853}
+    - target: {fileID: 82927588142875312, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a9b5ae6428d43f428da73fbeb1bed4c, type: 3}
+    - target: {fileID: 82724948488222498, guid: 5a0ca60202eb76a4392433908db13a09,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c2ed7b63d309a08418d995fd82c1cefb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
   m_IsPrefabParent: 0
