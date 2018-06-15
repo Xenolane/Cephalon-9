@@ -10,6 +10,11 @@ public class Titlescreen : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

@@ -1529,6 +1529,7 @@ MonoBehaviour:
   buttonsMenu: {fileID: 1395646124}
   settingsMenu: {fileID: 1395646123}
   upgradeMenu: {fileID: 1395646109}
+  tutorialUI: {fileID: 0}
 --- !u!114 &475090096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,6 +4812,10 @@ Prefab:
     - target: {fileID: 114777685307254620, guid: 6df674462b6a947478b4ac2356cec4b1,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190142851228150, guid: 6df674462b6a947478b4ac2356cec4b1, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

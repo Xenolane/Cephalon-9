@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour {
 
     public GameObject objectivesUI1;
+    public GameObject tutorialButton;
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
@@ -19,6 +20,7 @@ public class Tutorial : MonoBehaviour {
         objectivesUI1.SetActive(true);
         yield return new WaitForSeconds(10);
         objectivesUI1.SetActive(false);
+        tutorialButton.SetActive(true);
         Destroy(this.gameObject);
     }
 }

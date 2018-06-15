@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour {
     public GameObject buttonsMenu;
     public GameObject settingsMenu;
 	public GameObject upgradeMenu;
+    public GameObject tutorialUI;
 
 	void Update ()
     {
@@ -52,7 +53,16 @@ public class PauseMenu : MonoBehaviour {
 		buttonsMenu.SetActive(true);
 		upgradeMenu.SetActive(false);
 		settingsMenu.SetActive(false);
-	}
+        tutorialUI.SetActive(false);
+    }
+
+    public void Tutorial()
+    {
+        tutorialUI.SetActive(true);
+        buttonsMenu.SetActive(false);
+        upgradeMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+    }
 
     public void QuitGame()
     {
