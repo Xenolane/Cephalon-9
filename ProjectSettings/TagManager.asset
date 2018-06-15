@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - boundBlock
   - Bullet
+  - Water
   layers:
   - Default
   - TransparentFX

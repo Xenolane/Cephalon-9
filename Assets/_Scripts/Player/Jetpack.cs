@@ -21,17 +21,18 @@ namespace Cephalon9{
 		private float fuel;
 		[SerializeField]private float consumptionRate=10f;
 	    private bool jetpacking = false;
-	    
+		private PlayerController plr;
 
 	    private void Start()
 		{
 			rb = GetComponent<Rigidbody2D>();
 			fuel = maxFuel;
+			plr = GetComponent<PlayerController> ();
 		}
 
 		private void FixedUpdate()
 		{
-			if (Input.GetKey(KeyCode.LeftControl))
+			if (Input.GetKey(KeyCode.LeftControl) && !plr.inWater)
 			{
 				if (fuel > 0f) {
 					jetpacking = true;
