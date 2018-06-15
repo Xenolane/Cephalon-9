@@ -20,6 +20,7 @@ namespace Cephalon9{
 
 		//private variables
 		private bool grounded=false;
+		[HideInInspector]public bool inWater = false;
 		[HideInInspector]public bool right=true;
 
 		void Start (){
@@ -33,6 +34,7 @@ namespace Cephalon9{
 				weapon.StartCoroutine ("shoot");
 			if(Input.GetMouseButtonUp(1))
 				weapon.StartCoroutine ("launchGrenade");
+
 		}
 
 		void FixedUpdate(){
@@ -51,6 +53,11 @@ namespace Cephalon9{
 
 		//private functions
 		void jump(){
+			if (inWater) {
+				rb.velocity = new Vector2 (rb.velocity.x, jumpForce*0.25f);
+				return;
+			}
+
 			if (grounded) {
 				anim.SetTrigger ("jumping");
 				rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
@@ -88,6 +95,25 @@ namespace Cephalon9{
 			}
 		}
 
+		void OnTriggerEnter2D(Collider2D other){
+			if (other.CompareTag ("Water")) {
+				inWater = true;
+
+				rb.gravityScale = 0.25f;
+				rb.drag = 2f;
+				speed = 1;
+			}
+		}
+
+		void OnTriggerExit2D(Collider2D other){
+			if (other.CompareTag ("Water")) {
+				inWater = false;
+
+				rb.gravityScale = 1f;
+				rb.drag = 0f;
+				speed = 3;
+			}
+		}
 
 	}	
 }
