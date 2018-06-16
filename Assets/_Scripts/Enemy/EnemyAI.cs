@@ -113,9 +113,10 @@ namespace Cephalon9{
 
 			EnemyScanner.Range range = scanner.getRange();
 
-			if (range == EnemyScanner.Range.NONE) {
-				right = !right;
-				state = State.CHASING;
+			if (range == EnemyScanner.Range.NONE)
+            {
+                    right = !right;
+                    state = State.CHASING;
 			}
 
 			if (range != EnemyScanner.Range.CLOSE) {
@@ -135,17 +136,21 @@ namespace Cephalon9{
 		IEnumerator death(){
 			dead = true;
 			anim.SetTrigger ("dying");
-			yield return new WaitForSeconds (3f);
+			yield return new WaitForSeconds (4f);
 			Destroy (gameObject);
 		}
 
 		void OnTriggerStay2D(Collider2D other){
-			if (other.CompareTag ("Player")) {
-				if (state == State.ATTACKING) {
+			if (other.CompareTag ("Player"))
+            {
+				if (state == State.ATTACKING)
+                {
 					if (canAttack) {
 						StartCoroutine ("giveDamage");
 					}
 				}
+
+                
 			}
 		}
 			

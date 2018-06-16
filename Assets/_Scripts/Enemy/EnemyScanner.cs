@@ -26,15 +26,17 @@ namespace Cephalon9{
 		}
 
 		void OnTriggerStay2D(Collider2D other){
-			if (other.CompareTag("Player")) {
+			if (other.CompareTag("Player"))
+            {
 				detected = true;
 			}
 		}
 
 		void OnTriggerExit2D(Collider2D other){
-			if (other.CompareTag("Player")) {
-				detected = false;
-			}
+            if (other.CompareTag("Player"))
+            {
+                detected = false;
+            }
 		}
 
 		public Range getRange(){
