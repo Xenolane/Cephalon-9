@@ -22,13 +22,19 @@ namespace Cephalon9{
 				transform.rotation = Quaternion.identity;
 			else
 				transform.rotation = Quaternion.Euler (0, 180, 0);
-
 		}
 
 		void OnTriggerStay2D(Collider2D other){
 			if (other.CompareTag("Player"))
             {
-				detected = true;
+				Debug.DrawLine (transform.position, transform.position + 2 * transform.right);
+				RaycastHit2D hit = Physics2D.Raycast (transform.position, transform.right);
+
+				if (hit.collider.CompareTag("Ground")) {
+					detected = false;
+				} else {
+					detected = true;
+				}
 			}
 		}
 
@@ -54,6 +60,6 @@ namespace Cephalon9{
 				return Range.NONE;
 			}
 		}
-			
+
 	}
 }

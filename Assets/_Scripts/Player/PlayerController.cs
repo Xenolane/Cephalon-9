@@ -39,7 +39,7 @@ namespace Cephalon9{
 
 		void FixedUpdate(){
 			processMovement ();
-			processAudio ();
+//			processAudio ();
 			if (Input.GetKeyDown (KeyCode.Space))
 				jump ();
 		}
@@ -91,7 +91,10 @@ namespace Cephalon9{
 
 		void processAudio(){
 			if (rb.velocity.x != 0 && grounded) {
+				if(!footsteps.isPlaying)
 				footsteps.Play ();
+			} else {
+				footsteps.Stop ();
 			}
 		}
 

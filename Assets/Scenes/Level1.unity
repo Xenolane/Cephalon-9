@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -953,32 +953,32 @@ Prefab:
     - target: {fileID: 224677395440381136, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224677395440381136, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224305733931116130, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224305733931116130, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224938344169838222, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224938344169838222, guid: 8be23d2c53a77e243985beec54931553,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8be23d2c53a77e243985beec54931553, type: 2}
@@ -2353,24 +2353,14 @@ Prefab:
       objectReference: {fileID: 1026165482}
     - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
         type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1410503436}
-    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 2024554853}
-    - target: {fileID: 82927588142875312, guid: 5a0ca60202eb76a4392433908db13a09,
+    - target: {fileID: 114270715273756688, guid: 5a0ca60202eb76a4392433908db13a09,
         type: 2}
-      propertyPath: m_audioClip
+      propertyPath: healthBar
       value: 
-      objectReference: {fileID: 8300000, guid: 3a9b5ae6428d43f428da73fbeb1bed4c, type: 3}
-    - target: {fileID: 82724948488222498, guid: 5a0ca60202eb76a4392433908db13a09,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c2ed7b63d309a08418d995fd82c1cefb, type: 3}
+      objectReference: {fileID: 1410503436}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0ca60202eb76a4392433908db13a09, type: 2}
   m_IsPrefabParent: 0
@@ -30593,6 +30583,10 @@ Prefab:
         type: 2}
       propertyPath: m_Tiles.Array.data[836].second.m_ColliderType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253727809152124, guid: e3ae8d4ac6fae1b45a77de6f8cbad6f2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3ae8d4ac6fae1b45a77de6f8cbad6f2, type: 2}
