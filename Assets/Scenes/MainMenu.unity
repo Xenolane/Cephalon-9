@@ -220,7 +220,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e5df27184439b6546a556ba620bd87ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c09a39c79e93fbb48af4fdff7d7a5ddc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -636,7 +636,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 598e0ac45d0eff24cb57bbdcdb05b88b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc23201cd5d5bec42a9a579aa9b5b42a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -765,7 +765,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6691176, g: 0.875, b: 0.8664807, a: 0}
+  m_BackGroundColor: {r: 0.1454909, g: 0.16911763, b: 0.16813996, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
