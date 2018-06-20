@@ -22,10 +22,10 @@ public class ElectroBullet : Bullet
 			Destroy (gameObject);
 		}
 
-		if (coll.CompareTag("Player")) {
-			coll.GetComponent<PlayerHealth> ().takeDamage (damage);
-			Destroy(gameObject);
-		}
+		//if (coll.CompareTag("Player")) {
+			//coll.GetComponent<PlayerHealth> ().takeDamage (damage);
+			//Destroy(gameObject);
+		//}
 	}
 
 	public static void setDamage(float d){
