@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipWeapon : MonoBehaviour {
 
     private float fireDelay = 0.5f;
-    private float cooldownTime = 0;
+    private float cooldownTime = 4f;
 
     [Header("Components")]
 

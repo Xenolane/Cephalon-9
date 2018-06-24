@@ -34,6 +34,12 @@ public class ElectroBullet : Bullet
 			coll.GetComponent<PlayerHealth> ().takeDamage (damage);
 			Destroy(gameObject);
 		}
+
+            if (coll.CompareTag("Shield"))
+            {
+                coll.GetComponent<PlayerShield>().takeDamage(damage);
+                Destroy(gameObject);
+            }
 	}
 
 	public static void setDamage(float d)
