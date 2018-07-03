@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineOfSight : MonoBehaviour {
 
-    public Transform sightStart, sightEnd;
+    /*public Transform sightStart, sightEnd;
     public bool spotted = false;
 	
 	void Update ()
@@ -19,5 +19,5 @@ public class LineOfSight : MonoBehaviour {
         spotted = Physics2D.Linecast(sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer("Player"));
     }
 
-   
+   */
 }

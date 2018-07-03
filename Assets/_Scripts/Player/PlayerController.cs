@@ -39,7 +39,7 @@ namespace Cephalon9{
 
 		void FixedUpdate(){
 			processMovement ();
-			processAudio ();
+			//processAudio ();
 			if (Input.GetKeyDown (KeyCode.Space))
 				jump ();
 		}
@@ -89,11 +89,11 @@ namespace Cephalon9{
 			}
 		}
 
-		void processAudio(){
+/*		void processAudio(){
 			if (rb.velocity.x != 0 && grounded) {
 				footsteps.Play ();
 			}
-		}
+		}*/
 
 		void OnTriggerEnter2D(Collider2D other){
 			if (other.CompareTag ("Water")) {

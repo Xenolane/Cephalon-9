@@ -29,6 +29,16 @@ namespace Cephalon9{
 			if (other.CompareTag("Player"))
             {
 				detected = true;
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
+
+                if (hit.collider.CompareTag("Ground"))
+                {
+                    detected = false;
+                }
+                else
+                {
+                    detected = true;
+                }
 			}
 		}
 
